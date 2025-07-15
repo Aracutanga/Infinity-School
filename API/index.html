@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de api</title>
+</head>
+<body>
+     <span id="cep"></span>
+    <span id="logradouro"></span>
+    <span id="complemento"></span>
+    <span id="bairro"></span>
+    <span id="localidade"></span>
+    <span id="uf-abc"></span>
+
+    
+    <script>
+        let cep = Number(prompt("Por favor, digite apenas os digitos seu cep: "))
+
+        //estou captando minha url (minha api)
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        //então (then) transformamos nossa resposta
+        //que ate então veio como string
+        //para um objeto javascript novamente
+        .then(resposta => resposta.json())
+        //dados foi a forma como chamamos o objeto javascript, que na linha
+        //anterior foi retirado do formato json
+        .then(dados => 
+        {
+            console.log(dados)
+            //preciso pegar minha tag img
+            //preciso pegar o valor no meu objeto
+            //preciso colocar o valor que eu peguei dentro do src da imagem
+
+
+            //preciso pegar a tag span
+            //preciso pegar o nome de usuario no objeto
+            //escrever o nome do usuário dentro da tag span
+
+            // let span = document.getElementById('espaço_pro_nome')
+            // console.log(span)
+
+            // let span_name = dados.name
+            // console.log(span_name)
+
+            // spatag_bairro = span_name 
+
+            //pegar a tag da bio
+            //pegar a biografia dentro do objeto
+            //escrever a biografia dentro da tag p para bio
+
+            // let tag_bio = document.getElementById('bio')
+            // console.log(tag_bio)
+
+            // let chave_bio = dados.bio
+            // console.log(chave_bio)
+
+            // tag_bio.innerHTML = chave_bio
+
+            //*Logradouro*//
+            
+        let tag_logradouro = document.getElementById('logradouro')
+        console.log(tag_logradouro)
+        
+        let chave_logradouro = dados.logradouro
+        console.log(chave_logradouro)
+
+        tag_logradouro.innerHTML = chave_logradouro
+
+            //*Bairro*//
+
+        let tag_bairro = document.getElementById('bairro')
+        console.log(tag_bairro)
+
+        let  chave_bairro = dados.bairro
+
+        tag_bairro.innerHTML = chave_bairro
+
+            //*Complemento *//
+
+        let tag_complemento = document.getElementById('complemento')
+        console.log(tag_complemento)
+
+        let chave_complemento = dados.complemento
+
+         //*Localidade*//
+
+         let tag_localidade = document.getElementById('localidade')
+         console.log(tag_localidade)
+
+         let chave_localidade = dados.localidade
+         console.log(chave_localidade)
+
+         tag_localidade.innerHTML = chave_localidade
+
+         //*UF*//
+
+         let tag_uf = document.getElementById('uf-abc')
+         console.log(tag_uf)
+
+         let chave_uf = dados.uf
+         console.log(tag_uf)
+
+         tag_uf.innerHTML = chave_uf
+
+         //*CEP*//
+
+         //let chave_cep = document.getElementById("cep")
+        // console.log(chave_cep)
+
+         //let tag_cep = dados.cep;
+         //console.log(tag_cep)
+
+         //tag_uf.innerHTML = chave_cep
+
+        } 
+        
+        )
+    </script>
+</body>
+</html>
+
+
