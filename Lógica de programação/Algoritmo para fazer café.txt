@@ -1,0 +1,15 @@
+Algoritmo para fazer café:
+
+01. Definir qual utensílio a ser utilizado para fazer o café
+02. Se o utensílio escolhido for um coador de pano
+	02.1 - Então verificar que o filtro de pano esteja limpo
+	02.2 - Em um fervedor, colocar a água o suficiente para a quantidade desejada de café
+	02.3 - Colocar o fervedor em uma das bocas do fogão e acender o fogo na respectiva boca
+	02.4 - Quando a água ferver, apagar o fogo
+	02.5 - Adicionar pelo menos 3 (três) colheres de pó de café 
+	02.6 - Mexer lentamente o café por um minuto com uma colher
+	02.7 - Reacender a boca do fogão
+	02.8 - Quando a água começar a ferver apague o fogo
+	02.9 - Tenha a disposição um recipiente grande o suficiente para armazenar todo o café
+	02.10 - Despeje o conteúdo do fervedor no filtro de pano, certifique-se que o conteúdo que irá escorrer do pano caia diretamente no recepiente anteriormente mencionado
+	02.11 - Se o recepiente escolhido for uma cafeteira, certifique-se de que, depois de todo o café ter sido filtrado, a cafeteira esteja fechada corretamente para evitar que o café esfrie.
