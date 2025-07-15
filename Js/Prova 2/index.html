@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 2</title>
+</head>
+<body>
+    <script>
+
+
+let nome = prompt("Por favor, digite um nome: ")
+let a1 = Number(prompt("Por favor, digite a altura em centímetros: "))
+let p = Number(prompt("Por favor, digite o peso em kilogramas: "))
+let a2 = a1*0.01
+
+let imc = p/(a2*a2)
+imc = imc.toFixed(2)
+
+if(imc<16){
+    alert(`A classificação do IMC de ${nome} é de baixo peso (muito grave) e seu IMC = ${imc}`)
+}
+else if(imc<=16.99){
+    alert(`A classificação do IMC de ${nome} é de baixo peso (grave) e seu IMC = ${imc}`)
+}
+else if(imc<= 18.49){
+    alert(`A classificação do IMC de ${nome} é de baixo peso e seu IMC = ${imc}`)
+}
+else if(imc<=24.99){
+    alert(`A classificação do IMC de ${nome} é de peso normal e seu IMC = ${imc}`)
+}
+else if(imc<=29.99){
+    alert(`A classificação do IMC de ${nome} é de sobrepeso e seu IMC = ${imc}`)
+}
+else if(imc<= 34.99){
+    alert(`A classificação do IMC de ${nome} é obesidade grau I e seu IMC = ${imc}`)
+}
+else if(imc<= 39.99){
+    alert(`A classificação do IMC de ${nome} é de Obesidade grau II e seu IMC = ${imc}`)
+}
+else if(imc>=40.00){
+    alert(`A classificação do IMC de ${nome} é de Obesidade grau III e seu IMC = ${imc}`)
+}
+
+
+    </script>
+</body>
+</html>

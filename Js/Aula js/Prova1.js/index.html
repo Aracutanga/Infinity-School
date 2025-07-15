@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 1 de js</title>
+</head>
+<body>
+    <!-- Questao -->
+    <!-- Considere três notas (n1, n2, n3) e seus respectivos pesos (p1, p2, p3). 
+        Calcule a média ponderada das notas e atribua o resultado à variável "media".
+         Após o cálculo, exiba a média ponderada no console -->
+<script>
+    let n1 = Number(prompt("Por favor, digite o valor da primeira nota: "))
+    let n2 = Number(prompt("Por favor, digite o valor da segunda nota: "))
+    let n3 = Number(prompt("Por favor, digite o valor da terceira nota: "))
+    let p1 = Number(prompt("Por favor, digite do peso da primeira nota: "))
+    let p2 = Number(prompt("Por favor, digite do peso da segunda nota: "))
+    let p3 = Number(prompt("Por favor, digite do peso da terceira nota: "))
+    let media = (n1*p1 + n2*p2 + n3*p3)/(p1+p2+p3)
+    if(media>=5){
+        console.log(`Parabéns, você foi aprovado! O valor da sua média ponderada é de ${media} pontos.`)
+    }
+    else if(media<=5){
+        console.log(`Infelizmente, o aluno ainda não foi aprovado. Mas sei que você ainda vai conseguir se continuar tentando :) O valor da sua média ponderada é de ${media} pontos.`)
+    }
+    else{
+        console.log("Não foi possível calcular a média ponderada. ")
+    }
+   
+</script>
+</body>
+</html>

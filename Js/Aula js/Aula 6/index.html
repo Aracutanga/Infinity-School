@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //Ex.00.1//
+
+
+    //Crie uma função que peça um nome ao usuário e mostre esse nome dentro de um alerta. Não esqueça de chamar a função no final!
+
+
+    // function aula(){
+
+    //     let nome = prompt("Por favor, digite o seu nome: ")
+    //     alert(nome)
+    // }
+
+    // aula()
+
+    //Ex.00.2//
+
+    //Peça 4 notas ao usuário usando laço for e crie uma função que mostre a média na tela
+    //Crie o laço for que vai rodar 4 vezes
+    //Coloque um prompt dentro desse for, pedindo a nota
+    //Some todas as notas e guarde em uma variável
+    //Dentro do for calcule a média
+    //Crie uma função que recebe a média como parâmetro
+    //Coloque um alert(média) dentro da função
+    //Chame a função e passe o argumento (o nome da variável onde está guardado o valor real da média)
+
+    // let n1 = Number(pompt("Por favor, digite a primeira nota"))
+    // let n2 = Number(pompt("Por favor, digite a segunda nota"))
+    // let n3 = Number(pompt("Por favor, digite a terceira nota"))
+    // let n4 = Number(pompt("Por favor, digite a quarta nota"))
+    // let media = (n1 + n2 + n3 + n4)/4
+
+    // function media_final(media){
+    //     alert(media_final)
+    // }
+
+    // media_final(media)
+
+//////////ooooooou//////
+
+// let soma = 0
+// for(i=1;i<=4;i++){
+//     let n = Number(prompt("Por favor, digite uma nota: "))
+//     soma+=n
+// }
+
+//  let media=soma/4
+// function media_final(final){
+//     alert(final)
+// }
+// media_final(media)
+
+
+            //Atv 3//
+    //Escreva uma função que encontra a área e o perímetro de um círculo, de acordo com o raio fornecido
+//O perímetro de um círculo de raio r é calculado por C=2⋅π⋅r. A área de um círculo de raio r é dada por A=π⋅r2.
+
+// let raio = Number(prompt("Por favor, digite o raio do círculo em cm: "))
+// let area
+// let perimetro
+
+// function area_circulo(raio){
+//     area = 3.141516 * raio * raio
+//     alert(`A área é igual a: ${area} cm^2`)
+// }
+
+// function perimetro_circulo(raio){
+//     perimetro = 2 * 3.141516 * raio
+//     alert(`O perímetro é igual a: ${perimetro} cm`)
+// }
+
+// area_circulo(raio)
+// perimetro_circulo(raio)
+
+    //Ex 01//
+
+    //Escreva uma função que permita contar o número de vogais contidas
+    //em uma string fornecida pelo usuário. Por exemplo, o usuário informa
+    //a string “Beterraba”, e a função retorna o número 4 (há 4 vogais nessa palavra).
+    
+    // let contador = 0
+    // let palavra = prompt("Por favor, digite uma palavra: ")
+    // for(letra of palavra){
+    // if(letra==="a"||letra==="e"||letra==="i"||letra==="o"||letra==="u"){
+    //     contador++
+    // }
+    // }console.log(contador)
+
+    // function vogal_palavra(vogal){
+    //     alert(`Há um total de ${vogal} vogal(is) na sua palavra`)
+    //  }
+
+    //  vogal_palavra(contador)
+
+    //Atv 02//
+
+    //Implemente uma função que receba um número como parâmetro e informe o quadrado desse número
+
+    // let numero = Number(prompt("Por favor, digite o número que você deseja elevar ao quadrado: "))
+    // //let quadrado = numero*numero
+    // function quadrado(numero){
+    //     return numero*numero
+    // }
+
+    // quadrado(numero)
+
+    //Atv 03//
+
+    //Crie uma função anônima que simule uma calculadora básica. Ela deve
+    //aceitar dois números e uma operação (adição, subtração,multiplicação, divisão) como parâmetros e retornar o resultado.
+
+    let a = Number(prompt("Por favor, digite um número: "))
+    let b = Number(prompt("Por favor, digite um outro número: "))
+    let operacao = prompt("Escolha uma operação entre estas: adição/subtração/multiplicação/divisão")
+
+    // const soma = function(a,b){
+    //     return a+b
+    // }
+
+    // const subtração = function(a,b){
+    //     return a-b
+    // }
+    
+    // const multiplicacao = function(a,b){
+    //     return a*b
+    // }
+    
+    // const divisao = function(a,b){
+    //     return a/b
+    // }
+
+    const calculadora = function(a,b){
+        if(operacao==="adição"){
+            return a+b  
+        }else if(operacao==="subtração"){
+            return a-b  
+        }else if(operacao==="multiplicação"){
+            return a*b  
+        }else if(operacao==="divisão"){
+            return a/b  
+        }
+    }
+
+   alert(calculadora(a,b))
+
+    </script>
+</body>
+</html>

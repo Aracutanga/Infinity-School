@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova DOM</title>
+</head>
+<body>
+
+    <h2>Conversor de comprimento</h2>
+    <form>
+    <label for="unidade_inicial">Unidade de entrada:</label>
+    <select id="unidade_inicial" >
+    <option value="">-- Unidade Inicial --</option>
+    <option value="metros">Metros</option>
+    <option value="milhas">Milhas</option>
+    <option value="jardas">Jardas</option>
+    <option value="pes">Pés</option>
+    <option value="polegadas">Polegadas</option>
+    </select>
+    
+
+    <label for="unidade_final">Unidade de saída:</label>
+    <select id="unidade_final">
+    <option value="">-- Unidade Final --</option>
+    <option value="metros">Metros</option>
+    <option value="milhas">Milhas</option>
+    <option value="jardas">Jardas</option>
+    <option value="pes">Pés</option>
+    <option value="polegadas">Polegadas</option>
+    </select>
+    <label for="valor_entrada">Valor de entrada:</label>
+    <input type="number" id="valor_entrada" placeholder="Digite um valor">
+
+    <button type="button" id="converter_btt">Converter</button>
+</form>
+
+<p id="resultado"></p>
+
+
+    
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+            const unidade_inicial = document.getElementById('unidade_inicial');
+            const unidade_final = document.getElementById('unidade_final');
+            const valor_entrada = document.getElementById('valor_entrada');
+            const converter_btt = document.getElementById('converter_btt');
+            const resultado = document.getElementById('resultado');
+
+        
+            function convertUnits() {
+                const input = parseFloat(valor_entrada.value);
+                const fromUnit = unidade_inicial.value;
+                const toUnit = unidade_final.value;
+                
+                if (isNaN(input)) {
+                    resultado.textContent = 'Por favor, digite um valor válido.';
+                    return;
+                }
+
+                if (fromUnit === "" || toUnit === "") {
+                    resultado.textContent = 'Por favor, selecione as unidades de entrada e saída.';
+                    return;
+                }
+
+                let valueInMeters;
+
+               
+                switch (fromUnit) {
+                    case 'metros':
+                        valueInMeters = input;
+                        break;
+                    case 'milhas':
+                        valueInMeters = input * 1609.34;
+                        break;
+                    case 'jardas':
+                        valueInMeters = input * 0.9144;
+                        break;
+                    case 'pes':
+                        valueInMeters = input * 0.3048;
+                        break;
+                    case 'polegadas':
+                        valueInMeters = input * 0.0254;
+                        break;
+                }
+
+                let convertedValue;
+
+               
+                switch (toUnit) {
+                    case 'metros':
+                        convertedValue = valueInMeters;
+                        break;
+                    case 'milhas':
+                        convertedValue = valueInMeters / 1609.34;
+                        break;
+                    case 'jardas':
+                        convertedValue = valueInMeters / 0.9144;
+                        break;
+                    case 'pes':
+                        convertedValue = valueInMeters / 0.3048;
+                        break;
+                    case 'polegadas':
+                        convertedValue = valueInMeters / 0.0254;
+                        break;
+                }
+
+                resultado.textContent = `Resultado: ${convertedValue.toFixed(2)} ${toUnit}`;
+            }
+
+        
+            converter_btt.addEventListener('click', convertUnits);
+        });
+
+
+
+    </script>
+</body>
+</html>

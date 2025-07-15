@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 7</title>
+</head>
+<body>
+    <!-- Imagine que você está criando uma solução digital para restaurantes, incluindo uma calculadora de gorjetas de fácil uso. 
+    O objetivo é desenvolver uma página da web onde os clientes possam inserir o valor total da conta e escolher a qualidade do serviço:
+     "Bom", "Regular" ou "Ruim". Para isso, serão utilizadas arrow functions e funções de callback. -->
+     
+        <h1>Calculadora de Gorjetas</h1>
+        <label for="valorConta">Valor da Conta (R$):</label>
+        <input type="number" id="valorConta" step="0.01" placeholder="Digite o valor da conta">
+        <br>
+        <label for="qualidadeServico">Qualidade do Serviço:</label>
+        <select id="qualidadeServico">
+            <option value="bom">Bom</option>
+            <option value="regular">Regular</option>
+            <option value="ruim">Ruim</option>
+        </select>
+        <br>
+        <button onclick="calcularGorjeta()">Calcular Gorjeta</button>
+        <p id="resultado"></p>
+    
+        <script>
+           
+            const calcularGorjeta = () => {
+                let valorConta = Number(document.getElementById('valorConta').value);
+                let qualidadeServico = document.getElementById('qualidadeServico').value;
+                
+                const calcularPercentual = (valor, callback) => {
+                    let percentual;
+                    if (qualidadeServico === 'bom') {
+                        percentual = 0.20; 
+                    } else if (qualidadeServico === 'regular') {
+                        percentual = 0.10; 
+                    } else if (qualidadeServico === 'ruim') {
+                        percentual = 0.05; 
+                    }
+                    callback(valor, percentual);
+                };
+    
+                const exibirResultado = (valor, percentual) => {
+                    let gorjeta = valor * percentual;
+                    document.getElementById('resultado').textContent = `A gorjeta é: R$ ${gorjeta.toFixed(2)}`;
+                };
+    
+                calcularPercentual(valorConta, exibirResultado);
+            };
+    
+
+
+    </script>
+</body>
+</html>

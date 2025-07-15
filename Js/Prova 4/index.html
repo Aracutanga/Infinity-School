@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 4</title>
+</head>
+<body>
+    <script>
+//         [JS-A04] Você é um desenvolvedor de software que trabalha em uma equipe especializada em criar ferramentas matemáticas para uma empresa do mercado financeiro. 
+//         A empresa precisa de uma nova funcionalidade para sua plataforma online, permitindo que os usuários obtenham informações sobre cálculos matemáticos importantes 
+//         relacionados aos investimentos.
+// Sua tarefa é criar um módulo JavaScript que ofereça aos usuários a possibilidade de inserir um número inteiro positivo e, em resposta, calcular o fatorial desse número e 
+// também a sequência de Fibonacci até aquele número. Isso ajudará os investidores a realizar análises mais detalhadas sobre suas decisões financeiras.
+
+
+let numero_inteiro = Number(prompt("Por favor, digite um número inteiro: "))
+let fatorial = 1
+let numA = 0
+let numB = 1
+let numC
+let fibonacci = ""
+fibonacci += numA + ", " + numB
+
+for(i=1;i<=numero_inteiro;i++){
+fatorial *= i
+
+}console.log("Fatorial de " + numero_inteiro + " é: " + fatorial)
+
+
+while (true) {
+    let numC = numA + numB;
+    if (numC > numero_inteiro) {
+        break;
+    }
+    fibonacci += ", " + numC;
+    numA = numB;
+    numB = numC;
+}
+console.log("Sequência de Fibonacci até " + numero_inteiro + " é: " + fibonacci)
+
+
+
+
+    </script>
+</body>
+</html>

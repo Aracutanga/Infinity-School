@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto</title>
+</head>
+<body>
+    <h2>Lista de Tarefas</h2>
+    <h3>Escreva uma nova tarefa e aperte em adicionar</h3>
+    <form action=""></form>
+    <div id="input_container">
+        <!-- Inputs serão adicionados aqui -->
+    </div>
+    <button type="button" id="btn_adicionar">Adicionar</button>
+    <button type="button" id="btn_clear_all">Limpar Tudo</button>
+
+
+
+
+    <!-- //************JS**********// -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const inputContainer = document.getElementById('input_container');
+    const addButton = document.getElementById('btn_adicionar');
+    const clearAllButton = document.getElementById('btn_clear_all');
+
+    // Função para adicionar nova tarefa
+    function addTask(taskText = '') {
+        const taskDiv = document.createElement('div');
+        taskDiv.className = 'task';
+
+        const taskInput = document.createElement('input');
+        taskInput.type = 'text';
+        taskInput.value = taskText;
+        taskInput.className = 'input_classe';
+        taskInput.disabled = true; // Inicialmente, o input está desabilitado
+
+        const completeButton = document.createElement('button');
+        completeButton.textContent = 'Concluída';
+        completeButton.addEventListener('click', function() {
+            taskInput.classList.toggle('completed');
+        });
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Deletar';
+        deleteButton.addEventListener('click', function() {
+            inputContainer.removeChild(taskDiv);
+        });
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Escrever Tarefa';
+        editButton.addEventListener('click', function() {
+            taskInput.disabled = !taskInput.disabled; // Alterna entre habilitar e desabilitar o input
+            if (!taskInput.disabled) {
+                taskInput.focus(); // Foca no input quando habilitado para edição
+            }
+        });
+
+        taskDiv.appendChild(taskInput);
+        taskDiv.appendChild(completeButton);
+        taskDiv.appendChild(deleteButton);
+        taskDiv.appendChild(editButton);
+        inputContainer.appendChild(taskDiv);
+    }
+
+    // Adiciona a primeira tarefa vazia ao carregar a página
+    addTask();
+
+    // Adiciona nova tarefa ao clicar no botão "Adicionar"
+    addButton.addEventListener('click', function() {
+        addTask();
+    });
+
+    // Limpa todas as tarefas ao clicar no botão "Limpar Tudo"
+    clearAllButton.addEventListener('click', function() {
+        inputContainer.innerHTML = '';
+    });
+});
+
+
+</script>
+
+</body>
+</html>

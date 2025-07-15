@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //--- Ex 01 ---//
+// Crie um programa que solicita ao usuário um número e, em seguida,
+// conta regressivamente até zero, imprimindo cada número no console.
+// O programa deve terminar quando atingir zero.
+
+// let numero = Number(prompt("Digite um número diferente de zero"))
+// while(numero>=0){
+//     console.log(numero)
+//     numero--
+//     if(numero=0){
+//         break
+//     }
+// }
+
+//--- Ex 02 ---//
+// Desenvolva um programa que solicita ao usuário que insira suas
+// notas de uma série de disciplinas. O programa deve calcular e
+// imprimir a média das notas, o usuário pode continuar adicionando
+// notas até decidir parar.
+
+
+// let media = 0
+// var resultado
+// let soma = 0
+// var index
+
+// resultado = Number(prompt("Digite uma nota, ou escreva -10 pra sair"))
+
+// if(resultado=-10){
+//     alert("Saindo do programa")
+//     return
+// }
+// else{
+
+//     while(resultado !=-10){
+//         soma = resultado + soma
+//         index++
+//         media = soma /index
+
+//         resultado = Number(prompt("Digite uma nota, ou escreva -10 pra sair"))
+//     }
+// console.log(`Média = ` + media)
+// }
+
+//--- Ex 03 ---//
+// Peça ao usuário para inserir números continuamente e imprima o
+// somatório dos números inseridos. O programa deve continuar executando
+// até que o usuário insira zero.
+
+// let soma = 1
+// let resultado = 1
+
+// soma = Number(prompt("Por favor, digite um número, ou escreva 0 para sair do programa"))
+
+// while(true){
+// if(soma == 0){
+//    console.log(soma)
+//    break
+// }
+// else{
+//     while(soma!=0){
+// resultado = soma + resultado
+// soma = Number(prompt(`Sua soma até agora é igual a: ${resultado-1} Por favor, digite um número, ou escreva 0 para sair do programa`))
+
+//     }
+//     console.log(`A soma final é ${resultado-1}`)
+// }
+// }
+
+//--- Ex 04 ---//
+// Faça um programa que leia um nome de usuário e a sua senha e não
+// aceite a senha igual ao nome do usuário, mostrando uma mensagem de
+// erro e voltando a pedir as informações.
+
+// let usuario = prompt("Por favor, digite o seu nome de usuário, ou digite -10 para sair ")
+// let senha = prompt("Por favor, digite a sua senha, ou digite -10 para sair ")
+
+// while(true){
+//     if(senha === usuario){
+//        alert("O usuário não pode ser igual a senha. Por favor, reescreva a senha ou o usuário. ")
+//         let usuario = prompt("Por favor, digite o seu nome de usuário, ou digite -10 para sair ")
+//         let senha = prompt("Por favor, digite a sua senha, ou digite -10 para sair ") 
+//         break       
+//     }
+//     else if(senha==-10 || usuario ==-10){
+//         console.log("Saindo do programa")
+//         break
+//     }
+//     else{
+//         alert("Registro feito com sucesso.")
+//     }
+// }
+
+//--- Ex 05 ---//
+// Faça um programa que peça para 5 pessoas a sua idade, ao final o
+// programa devera verificar se a média de idade da turma varia entre 0 e 25,
+// 26 e 60 e maior que 60; e então, dizer se a turma é jovem, adulta ou idosa,
+// conforme a média calculada.
+
+
+
+// let media = 0
+// let index = 1
+// let idade = 0
+// let soma = 0
+
+// while(index<6){
+//     let idade = Number(prompt("Por favor, digite a sua idade"))
+//     soma+=idade    
+//     media = soma/index
+//     index++ 
+//     if(index==5 & media>0 & media<25){
+// console.log(`A média da turma é de ${media} anos e ela é uma turma jovem`)
+//     }
+//     else if(index==5 & media>25 & media<60){
+//         console.log(`A média da turma é de ${media} anos e ela é uma turma adulta.`)
+//     }
+//     else if(index==5 & media>60){
+//         console.log(`A média da turma é de ${media} anos e ela é uma turma idosa`)
+//     }
+// }
+
+//--- Ex 06 ---//
+// Calcule a soma dos números de 1 a 50
+
+// let index = 1
+// let soma = 0
+
+// while(index<51){
+//     soma+=index
+//     index++
+    
+// }
+// console.log(soma)
+
+//--- Ex 07 ---//
+// Crie um programa que solicite um número de 1 a 7, representando
+// o dia da semana. Use uma estrutura switch (ou equivalente) para
+// imprimir o nome do dia correspondente.
+
+
+
+    </script>
+</body>
+</html>

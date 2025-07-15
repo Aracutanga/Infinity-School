@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova JS</title>
+</head>
+<body>
+    <script>
+
+let numero_de_estudantes = Number(prompt("Por favor, digite o número total de estudantes da turma: "));
+let contador = 1;
+let soma = 0;
+let maior_nota = 0;
+let menor_nota = 0;
+
+while (contador <= numero_de_estudantes) {
+    let nota = Number(prompt(`Por favor, digite a nota de seu aluno número ${contador}: `));   
+
+    soma += nota;
+
+    if (contador === 1) {
+        maior_nota = nota;
+        menor_nota = nota;
+    } else {
+        if (nota > maior_nota) {
+            maior_nota = nota;
+        }
+        if (nota < menor_nota) {
+            menor_nota = nota;
+        }
+    }
+
+    contador++;
+}
+
+let media = soma / numero_de_estudantes;
+
+alert(`A média da turma é: ${media}`);
+alert(`A maior nota da turma foi: ${maior_nota}`);
+alert(`A menor nota da turma foi: ${menor_nota}`);
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

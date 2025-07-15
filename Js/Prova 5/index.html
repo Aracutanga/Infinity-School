@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 5</title>
+</head>
+<body>
+    <script>
+// [JS-A05] Você foi convidado(a) a desenvolver um aplicativo web para ajudar a gerenciar as tarefas domésticas de uma família agitada. 
+// O objetivo é criar um "Gerenciador de Tarefas Domésticas" que permita que todos os membros da família adicionem, removam e atualizem suas tarefas diárias, 
+// garantindo que tudo seja feito de forma organizada.
+
+//Tem que permitir 
+        //Adicionar
+        //Remover
+        //Atualizar
+
+        let tarefas_domesticas = [];
+
+while (true) {
+    let comando = prompt(`Sua atual lista de tarefas é: ${tarefas_domesticas}.
+Você gostaria de adicionar, remover ou atualizar as tarefas? (Adicionar/Remover/Atualizar)
+Ou escreva "Sair" para sair.`);
+
+    if (comando.toLowerCase() === "adicionar") {
+        let tarefa_adicionar = prompt("Por favor, digite uma tarefa a ser feita: ");
+        tarefas_domesticas.push(tarefa_adicionar);
+        console.log(`Tarefa "${tarefa_adicionar}" adicionada à lista.`);
+    } else if (comando.toLowerCase() === "remover") {
+        let posicao = Number(prompt(`Qual é a posição da tarefa que você quer remover nessa lista? O primeiro elemento começa na posição 0, ok? ${tarefas_domesticas}`));
+
+        if (posicao >= 0 && posicao < tarefas_domesticas.length) {
+            tarefas_domesticas.splice(posicao, 1);
+            console.log("Tarefa removida com sucesso.");
+        } else {
+            console.log("Posição inválida. A lista não foi alterada.");
+        }
+    } else if (comando.toLowerCase() === "atualizar") {
+        let posicao = Number(prompt(`Qual é a posição da tarefa que você quer atualizar nessa lista? O primeiro elemento começa na posição 0, ok? ${tarefas_domesticas}`));
+
+        if (posicao >= 0 && posicao < tarefas_domesticas.length) {
+            let nova_tarefa = prompt("E por qual tarefa você deseja substituí-la?");
+            tarefas_domesticas.splice(posicao, 1, nova_tarefa);
+            console.log("Tarefa atualizada com sucesso.");
+        } else {
+            console.log("Posição inválida. A lista não foi alterada.");
+        }
+    } else if (comando.toLowerCase() === "sair") {
+        break;
+    } else {
+        console.log("Comando inválido. Tente novamente.");
+    }
+}
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
